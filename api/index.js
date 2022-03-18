@@ -24,7 +24,10 @@ const server = http.createServer(app);
 
 const io = socketio(server, {
   cors: {
-    origin: ["http://localhost:3000", "https://staging--ultimate-quiz-game.netlify.app/"]
+    origin: ['http://localhost:3000', 'https://staging--ultimate-quiz-game.netlify.app/','https://ultimate-quiz-game.netlify.app/','https://staging--ultimate-quiz-game.netlify.app','https://staging--ultimate-quiz-game.netlify.app'],
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['my-custom-header','content-length','Content-Length','content-type','Content-Type','authorization', 'Authorization',],
+    credentials: true
   }
 });
 
